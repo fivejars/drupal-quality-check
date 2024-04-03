@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "grumphp": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/grumphp run"
+    ],
+    "phpmetrics": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpmetrics --composer=false --report-html=/var/www/web/report/phpmetrics web/modules/custom"
+    ],
+    "phpstan": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpstan analyse"
+    ],
+    "phpcs": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpcs"
+    ],
+    "phpcbf": "vendor/bin/phpcbf",
+    "phpmd": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpmd web/modules/custom/ text phpmd.xml"
+    ],
+    "phpmnd": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpmnd web/modules/custom --progress"
+    ],
+    "twigcs": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/twigcs"
+    ]
+  }
+}
