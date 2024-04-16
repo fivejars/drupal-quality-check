@@ -70,7 +70,7 @@ grumphp:
     yamllint: ~
     git_branch_name:
       whitelist:
-        - /FJPDS-\d+|release--\d+\.?\d+\.?\d+/
+        - /[A-Z]*-\d+|release--\d+\.?\d+\.?\d+/
       blacklist:
         - "develop"
         - "staging"
