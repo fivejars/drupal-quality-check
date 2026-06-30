@@ -12,7 +12,7 @@
         "php": ">=8.2",
         "acquia/coding-standards": "^2.0",
         "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "drupal/coder": "8.3.23",
+        "drupal/coder": "^8.3",
         "ergebnis/composer-normalize": ">=2.5",
         "ergebnis/phpstan-rules": "^2.1",
         "friendsoftwig/twigcs": "^6.4",
