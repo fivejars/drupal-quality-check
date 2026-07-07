@@ -15,7 +15,6 @@
   </rule>
   <rule ref="Generic.PHP.RequireStrictTypes" />
   <rule ref="PHPCompatibility">
-    <config name="testVersion" value="8.2"/>
     <exclude name="PHPCompatibility.Extensions.RemovedExtensions.ypRemoved"/>
   </rule>
   <file>./web/modules/custom</file>
