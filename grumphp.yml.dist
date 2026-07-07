@@ -1,6 +1,6 @@
 grumphp:
   git_hook_variables:
-    EXEC_GRUMPHP_COMMAND: fin run-cli --image=docksal/cli:php8.2-3.6 php
+    EXEC_GRUMPHP_COMMAND: fin run-cli --image=docksal/cli:php8.4-3.12 php
   stop_on_failure: false
   ignore_unstaged_changes: true
   tasks:
@@ -49,11 +49,13 @@ grumphp:
         - yml
         - css
         - js
-    phpmd:
-      whitelist_patterns:
-        - /^web\/modules\/custom\/(.*)/
-      ruleset: [ 'phpmd.xml' ]
-      triggered_by: [ 'php', 'install', 'inc', 'module' ]
+#    Disable temporary, as phpmd command in Grumphp is not working properly with phpmd v3.0.0.
+#    @see https://github.com/phpro/grumphp/issues/1209
+#    phpmd:
+#      whitelist_patterns:
+#        - /^web\/modules\/custom\/(.*)/
+#      ruleset: [ 'phpmd.xml' ]
+#      triggered_by: [ 'php', 'install', 'inc', 'module' ]
     phpmnd:
       directory: web/modules/custom
       whitelist_patterns: [ ]

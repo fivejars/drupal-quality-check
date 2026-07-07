@@ -14,12 +14,13 @@
     ],
     "phpcs": [
       "Composer\\Config::disableProcessTimeout",
-      "vendor/bin/phpcs"
+      "vendor/bin/phpcs --runtime-set testVersion 8.4"
     ],
     "phpcbf": "vendor/bin/phpcbf",
     "phpmd": [
       "Composer\\Config::disableProcessTimeout",
-      "vendor/bin/phpmd web/modules/custom/ text phpmd.xml"
+      "vendor/bin/phpmd analyze web/modules/custom/ --format text --ruleset phpmd.xml --no-progress",
+      "vendor/bin/phpmd analyze web/themes/custom/ --format text --ruleset phpmd.xml --no-progress"
     ],
     "phpmnd": [
       "Composer\\Config::disableProcessTimeout",

@@ -13,7 +13,7 @@ parameters:
   # FROM mglaman/drupal-check/phpstan/base_config.neon
   reportUnmatchedIgnoredErrors: false
   excludePaths:
-    - /tests/*
+    - */tests/*
     - */settings*.php
     - */bower_components/*
     - */node_modules/*
